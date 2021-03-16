@@ -23,12 +23,12 @@ class User(db.Model):
     password = db.Column(db.String(120), nullable=False)
 
     def toDict(self):
-      return {
-        'id': self.id,
-        'username': self.username,
-        'email': self.email,
-        'password': self.password
-      }
+        return {
+            'id': self.id,
+            'username': self.username,
+            'email': self.email,
+            'password': self.password
+        }
 
 
     def set_password(self, password):
