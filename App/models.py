@@ -40,59 +40,18 @@ class User(db.Model):
 
 class Pokemon(db.Model):
     pid = db.Column('pid', db.Integer, primary_key=True)
-    abilities = db.Column(db.String(50))
-    against_bug = db.Column(db.Float)
-    against_dark = db.Column(db.Float)
-    against_dragon = db.Column(db.Float)
-    against_electric = db.Column(db.Float)
-    against_fairy = db.Column(db.Float)
-    against_fight = db.Column(db.Float)
-    against_fire = db.Column(db.Float)
-    against_flying = db.Column(db.Float)
-    against_ghost = db.Column(db.Float)
-    against_grass = db.Column(db.Float)
-    against_ground = db.Column(db.Float)
-    against_ice = db.Column(db.Float)
-    against_normal = db.Column(db.Float)
-    against_poison = db.Column(db.Float)
-    against_psychic = db.Column(db.Float)
-    against_rock = db.Column(db.Float)
-    against_steel = db.Column(db.Float)
-    against_water = db.Column(db.Float)
-    attack = db.Column(db.Float)
-    base_egg_steps = db.Column(db.Float)
-    base_happiness = db.Column(db.Float)
-    base_total = db.Column(db.Float)
-    capture_rate = db.Column(db.Float)
-    classfication = db.Column(db.String(50))
-    defense = db.Column(db.Float)
-    experience_growth = db.Column(db.Float)
-    height = db.Column(db.Float)
-    hp = db.Column(db.Float)
-    japanese_name = db.Column(db.String(50))
     name = db.Column(db.String(50))
-    percentage_male = db.Column(db.Float)
-    pokedex_number = db.Column(db.Integer)
+    attack = db.Column(db.Float)
+    defense = db.Column(db.Float)
+    hp = db.Column(db.Float)
+    height = db.Column(db.Float)
     sp_attack = db.Column(db.Float)
     sp_defense = db.Column(db.Float)
     speed = db.Column(db.Integer)
     type1 = db.Column(db.String(50))
     type2 = db.Column(db.String(50))
     weight = db.Column(db.Float)
-    generation = db.Column(db.Float)
-    is_legendary = db.Column(db.Float)
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     def toDict(self):
         return {
             'pid':self.pid,
