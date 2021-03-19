@@ -37,20 +37,20 @@ class User(db.Model):
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
-
+## Create a Pokemon Model
 class Pokemon(db.Model):
-    pid = db.Column('pid', db.Integer, primary_key=True)
-    name = db.Column(db.String(50))
-    attack = db.Column(db.Float)
-    defense = db.Column(db.Float)
-    hp = db.Column(db.Float)
-    height = db.Column(db.Float)
-    sp_attack = db.Column(db.Float)
-    sp_defense = db.Column(db.Float)
-    speed = db.Column(db.Integer)
-    type1 = db.Column(db.String(50))
-    type2 = db.Column(db.String(50))
-    weight = db.Column(db.Float)
+    pid = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    attack = db.Column(db.Float, nullable=False)
+    defense = db.Column(db.Float, nullable=False)
+    hp = db.Column(db.Float, nullable=False)
+    height = db.Column(db.Float, nullable=True)
+    sp_attack = db.Column(db.Float, nullable=True)
+    sp_defense = db.Column(db.Float, nullable=True)
+    speed = db.Column(db.Integer, nullable=True)
+    type1 = db.Column(db.String(50), nullable=True)
+    type2 = db.Column(db.String(50), nullable=True)
+    weight = db.Column(db.Float, nullable=True)
     
     def toDict(self):
         return {
@@ -67,4 +67,3 @@ class Pokemon(db.Model):
             'type2':self.type2,
             'weight':self.weight
         }
-## Create a Pokemon Model
