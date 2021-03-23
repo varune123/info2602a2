@@ -28,5 +28,6 @@ with open('/workspace/info2602a2/App/pokemon.csv', 'r') as file:
             
         db.session.add(data)
 
+
 db.session.commit()
 # replace any null values with None to avoid db errors
