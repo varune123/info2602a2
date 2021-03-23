@@ -25,7 +25,8 @@ with open('/workspace/info2602a2/App/pokemon.csv', 'r') as file:
             data.type1 ='None'
         if data.type2 =='':
             data.type2 ='None'
+            
+        db.session.add(data)
 
-db.session.add(data)
 db.session.commit()
 # replace any null values with None to avoid db errors
